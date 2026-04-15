@@ -149,7 +149,7 @@ can be downloaded from [here](https://imagej.net/software/fiji/downloads").
 A representative example of an image-slice through the generated volume of the
 synthetic package is given below.
 
-![A grayscale image slice through the generated volume illustrating key geometric features that mimic a real semiconductor package.](./resources/simplified_chip_750p_Front_0376.png)
+![A grayscale image slice through the generated volume illustrating key geometric features that mimic a real semiconductor package.](./resources/simplified_chip_750p_Front_0376.jpg)
 
 
 ## 1.2) Convert the Generated Images to STL Volumes
@@ -303,7 +303,7 @@ using the simulated X-ray projection images. As can be seen, XCT artifacts are
 present, similar to those commonly seen in real XCT measurements of chip
 packages.
 
-![Reconstructed image-slice through the synthetic chip is shown. The simulated X-ray projection images used in this reconstruction result in X-ray computed tomography (XCT) artifacts similar to those seen in actual XCT experiments.](./resources/recon_2400_chip_4um_cone_Front_0376.png)
+![Reconstructed image-slice through the synthetic chip is shown. The simulated X-ray projection images used in this reconstruction result in X-ray computed tomography (XCT) artifacts similar to those seen in actual XCT experiments.](./resources/recon_2400_chip_4um_cone_Front_0376.jpg)
 
 
 ## References
