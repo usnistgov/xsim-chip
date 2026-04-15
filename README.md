@@ -326,7 +326,7 @@ Express, 24(22), 25129. https://doi.org/10.1364/OE.24.025129
 
 ## Authors and Contact Information
 
-* (Lead Programmer) Newell Moser, PhD | [@NM0ser](https://github.com/NM0ser) | [NIST Homepage](https://www.nist.gov/people/newell-moser)
+* Newell Moser, PhD | Lead Programmer [@NM0ser](https://github.com/NM0ser) | [NIST Homepage](https://www.nist.gov/people/newell-moser)
 
 * Jacob Rezac, PhD | [NIST Homepage](https://www.nist.gov/people/jacob-rezac)
 
