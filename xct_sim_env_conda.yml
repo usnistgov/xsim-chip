@@ -1,0 +1,43 @@
+# This file is used to create a new conda (or mamba) environment called
+# "xct_sim_env". First, open a conda prompt/terminal, which can be installed
+# through Anaconda (license fees may apply) or miniforge (open-source). In a
+# conda prompt, the following command can be used to create the environment:
+# 
+#     conda create --file /path/to/xct_sim_env_conda.yml
+#
+# where /path/to/xct_sim_env_conda.yml is replaced with the path to this file.
+#
+# If you are using an older version of the conda package manager, you may need
+# to use the following syntax instead:
+#
+#     conda env create --file /path/to/xct_sim_env_conda.yml
+#
+# Once the virtual environment is created, you can activate it via:
+#
+#     conda activate xct_sim_env
+#
+# Note, this installation includes cython as a dependency. However, cython is
+# only necessary if you must manually compile the img2stl python (i.e., cython) 
+# extension. Pre-compiled binaries for this library are already included for
+# Windows x64 machines for python 3.11 and 3.12. Additional details about 
+# compiling this cython extension are provided in "ReadMe_Cython_Extension.txt"
+# located in "./1_generate_chip_imgs/cython".
+#
+name: xct_sim_env
+channels:
+  - conda-forge
+  - astra-toolbox
+  - nvidia
+dependencies:
+  - python>=3.11,<3.13
+  - pip>=24.0
+  - astra-toolbox>=2.2
+  - pip:
+    - numpy>=1.26
+    - scipy>=1.15
+    - tifffile>=2025
+    - scikit-image>=0.25
+    - trimesh>=4.11
+    - gvxr>=2.0.10
+    - matplotlib>=3.10
+    - cython>=3.2
