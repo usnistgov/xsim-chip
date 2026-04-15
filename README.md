@@ -332,9 +332,9 @@ Express, 24(22), 25129. https://doi.org/10.1364/OE.24.025129
 
 * Zachary Grey, PhD | [NIST Homepage](https://www.nist.gov/people/zachary-grey)
 
-* Jason Killgore, PhD | [NIST Homepage](https://www.nist.gov/people/jason-killgore)
-
 * Evgeniya Lagoda, PhD | [NIST Homepage](https://www.nist.gov/people/evgeniya-lagoda)
+
+* Jason Killgore, PhD | [NIST Homepage](https://www.nist.gov/people/jason-killgore)
 
 
 ## Acknowledgements
