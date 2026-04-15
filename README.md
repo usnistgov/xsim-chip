@@ -324,9 +324,15 @@ Dabravolski, A., De Beenhouwer, J., Joost Batenburg, K., & Sijbers, J.
 Express, 24(22), 25129. https://doi.org/10.1364/OE.24.025129
 
 
-## Authors and Contact Information
+## Authors, Collaborators, and Contact Information
 
 * Newell Moser, PhD | [@NM0ser](https://github.com/NM0ser) | [NIST Homepage](https://www.nist.gov/people/newell-moser)
+
+* Jacob Rezac, PhD | [NIST Homepage](https://www.nist.gov/people/jacob-rezac)
+
+* Zachary Grey, PhD | [NIST Homepage](https://www.nist.gov/people/zachary-grey)
+
+* Jason Killgore, PhD | [NIST Homepage](https://www.nist.gov/people/jason-killgore)
 
 
 ## NIST Disclaimer
