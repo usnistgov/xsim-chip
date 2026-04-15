@@ -146,6 +146,11 @@ While python packages like "tifffile" naturally work with multi-page tif files,
 software like ImageJ/FIJI can be used to visually explore these tif files. FIJI
 can be downloaded from [here](https://imagej.net/software/fiji/downloads").
 
+A representative example of an image-slice through the generated volume of the
+synthetic package is given below.
+
+![A grayscale image slice through the generated volume illustrating key geometric features that mimic a real semiconductor package.](./resources/simplified_chip_750p_Front_0376.png)
+
 
 ## 1.2) Convert the Generated Images to STL Volumes
 
@@ -251,6 +256,10 @@ images can be found in the subdirectories,
   2) "./2_xct_simulation/sim_radios_parallel_beam_pixsz4um/
   radios_2400_chip_4um_parallel_16bit.tif": Parallel-beam projection images.
 
+A few examples of X-ray projection images are shown below.
+
+![Eight X-ray projection images that were simulated as the synthetic chip package rotated 360 degrees](./resources/radios_2400_chip_4um_cone_16bit_8imgs.gif)
+
 
 ## 3) Reconstruct the Simulated X-ray Projections
 
@@ -288,6 +297,13 @@ files with filenames that end with "_Front.tif", "_Side.tif", and "_Top.tif".
 These .tif files match, on a per-pixel basis, the corresponding ground-truth
 images containing the same filename-endings which are mentioned in the above
 section, "Procedurally Generate a Synthetic Chip Package".
+
+The same image-slice shown above is now shown below after reconstructing it
+using the simulated X-ray projection images. As can be seen, XCT artifacts are
+present, similar to those commonly seen in real XCT measurements of chip
+packages.
+
+![Reconstructed image-slice through the synthetic chip is shown. The simulated X-ray projection images used in this reconstruction result in X-ray computed tomography (XCT) artifacts similar to those seen in actual XCT experiments.](./resources/recon_2400_chip_4um_cone_Front_0376.png)
 
 
 ## References
