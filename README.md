@@ -334,6 +334,15 @@ Express, 24(22), 25129. https://doi.org/10.1364/OE.24.025129
 
 * Jason Killgore, PhD | [NIST Homepage](https://www.nist.gov/people/jason-killgore)
 
+* Evgeniya Lagoda, PhD | [NIST Homepage](https://www.nist.gov/people/evgeniya-lagoda)
+
+
+## Acknowledgements
+
+This work was performed with funding from the CHIPS Metrology Program, part of
+CHIPS for America, National Institute of Standards and Technology, U.S.
+Department of Commerce.
+
 
 ## NIST Disclaimer
 
