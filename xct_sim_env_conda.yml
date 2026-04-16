@@ -17,11 +17,12 @@
 #     conda activate xct_sim_env
 #
 # Note, this installation includes cython as a dependency. However, cython is
-# only necessary if you must manually compile the img2stl python (i.e., cython) 
+# only necessary if you must manually compile the img2stl python (i.e., cython)
 # extension. Pre-compiled binaries for this library are already included for
-# Windows x64 machines for python 3.11 and 3.12. Additional details about 
-# compiling this cython extension are provided in "ReadMe_Cython_Extension.txt"
-# located in "./1_generate_chip_imgs/cython".
+# Windows x64 machines for python 3.11 and 3.12 as well as Ubuntu x64 machines
+# for python 3.11 and 3.12. Additional details about compiling this cython
+# extension are provided in "ReadMe_Cython_Extension.txt" located
+# in, "./1_generate_chip_imgs/cython".
 #
 name: xct_sim_env
 channels:

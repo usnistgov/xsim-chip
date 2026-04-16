@@ -25,7 +25,15 @@ managers, which can be installed via the open-source
 
 The conda (or mamba) package manager is preferred because our python scripts
 depend on astra-toolbox, and this package requires the conda package manager
-for general installations.
+for general installations. However, for Linux operating systems, it is possible
+to install all of the necessary dependencies using pip via PyPi since there is
+a distribution of astra-toolbox on PyPi specifically for Linux. The information
+below assumes you are using the conda package manager. Additional information is
+provided in the next subsection for Linux users interested installing these 
+dependencies with pip.
+
+
+### Installation Using Conda
 
 The necessary dependencies to run our Python scripts are provided in the
 included "xct_sim_env_conda.yml" file. This file can be used to install the
@@ -44,22 +52,62 @@ this environment, simply type,
 ```
   conda activate xct_sim_env
 ```
-There is a Python (i.e., Cython) extension used in the generation of the .stl
-files representing the simplified chip package. This extension must be compiled
-for one of the scripts to run successfully. The specific script
-is, "2_make_stl_model_v2.py", which is located in "./1_generate_chip_imgs".
-This extension, named "img2stl", has already been compiled for Windows x64
-machines running Python 3.11 or 3.12. The precompiled extensions for Windows
-are .pyd files. If a different operating system is used, or a different version
-of Python, then this extension must be manually compiled by the user. This will
-require installation of a C compiler. Additional instructions are provided
-in "ReadMe_Cython_Extension.txt" located in "./1_generate_chip_imgs/cython".
-
 To run a Python script within your activated virtual conda (or mamba) 
 environment, simply type the following,
 ```
   python /path/to/script.py
 ```
+There is a Python (i.e., Cython) extension used in the generation of the .stl
+files representing the simplified chip package. This extension must be compiled
+for one of the scripts to run successfully. The specific script
+is, "2_make_stl_model_v2.py", which is located in "./1_generate_chip_imgs".
+This extension, named "img2stl", has already been compiled for Windows x64 and
+Ubuntu machines running Python 3.11 or 3.12. The precompiled extensions for
+Windows are .pyd files, and the precompiled extensions for Ubuntu are .so
+files. If a different operating system is used, or a different version of
+Python, then this extension must be manually compiled by the user. This will
+require installation of a C compiler. Additional instructions are provided
+in "ReadMe_Cython_Extension.txt" located in "./1_generate_chip_imgs/cython".
+
+
+### Installation Using Pip
+
+As mentioned above, installation of the dependencies using pip is only possible
+for Linux operating systems due to the way astra-toolbox is distributed on PyPi.
+However, only the last step of this Python workflow requires astra-toolbox; this
+is the step that calculates the reconstruction of the simulated X-ray projection
+images (additional details provided below). If you do not wish to run the Python
+scripts for this step, then all of the remaining dependencies can be installed
+via pip for any operating system. Alternatively, it is also possible to compile
+astra-toolbox from source instead of installing the precompiled binaries through
+pip.
+
+The necessary dependencies to run our Python scripts are provided in the
+included "requirements_pip.txt" file. It is highly recommended that these are
+installed in a Python virtual environment, such as a 
+[venv](https://docs.python.org/3.12/library/venv.html) or a 
+[conda](https://github.com/conda-forge/miniforge) environment. This virtual
+environment should contain either Python 3.11 or 3.12 and the pip package
+manager. Then, the dependencies given in the "requirements_pip.txt" file can be
+installed (on Linux) via the the command,
+```
+  pip install -r /path/to/requirements_pip.txt
+```
+where "/path/to/requirements_pip.txt" is replaced with the actual path to
+the "requirements_pip.txt" file provided in this repository.
+
+There is a Python (i.e., Cython) extension used in the generation of the .stl
+files representing the simplified chip package. This extension must be compiled
+for one of the scripts to run successfully. The specific script
+is, "2_make_stl_model_v2.py", which is located in "./1_generate_chip_imgs".
+This extension, named "img2stl", has already been compiled for Windows x64 and
+Ubuntu machines running Python 3.11 or 3.12. The precompiled extensions for
+Windows are .pyd files, and the precompiled extensions for Ubuntu are .so
+files. If a different operating system is used, or a different version of
+Python, then this extension must be manually compiled by the user. This will
+require installation of a C compiler. Additional instructions are provided
+in "ReadMe_Cython_Extension.txt" located in "./1_generate_chip_imgs/cython".
+
 
 ## Directory Tree
 
@@ -68,10 +116,6 @@ Simulations_XCT_Chip_Python
  |-- 1_generate_chip_imgs
  |    |-- cython
  |    |    +-- build
- |    |         |-- lib.win-amd64-cpython-311
- |    |         |-- lib.win-amd64-cpython-312
- |    |         |-- temp.win-amd64-cpython-311
- |    |         +-- temp.win-amd64-cpython-312
  |    +-- imgs_out_750p
  |         |-- feature_list_Cu
  |         |-- feature_list_Si

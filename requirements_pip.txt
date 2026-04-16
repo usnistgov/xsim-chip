@@ -1,0 +1,31 @@
+# This file is used to install the necessary dependencies for xsim-chip. It is
+# highly recommended that these are installed in a Python virtual environment,
+# such as "venv" (see https://docs.python.org/3.12/library/venv.html) or a
+# conda environment (see https://github.com/conda-forge/miniforge).
+#
+# IMPORTANT: This library expects either Python 3.11 or 3.12. Some dependencies
+# will not work with newer versions of Python. Moreover, the installation of
+# these dependencies through pip will only work for Linux operating systems.
+# For Windows users, please see the general installation instructions using
+# conda explained in, "xct_sim_env_conda.yml".
+#
+# Within your virtual Python environment, these depencies can be installed via,
+#
+#     pip install -r /path/to/requirements_pip.txt
+#
+# This installation includes cython as a dependency. However, cython is
+# only necessary if you must manually compile the img2stl python (i.e., cython)
+# extension. Pre-compiled binaries for this library are already included for
+# Ubuntu x64 machines for python 3.11 and 3.12. Additional details about 
+# compiling this cython extension are provided in "ReadMe_Cython_Extension.txt" 
+# located in, "./1_generate_chip_imgs/cython".
+#
+astra-toolbox >= 2.2
+numpy >= 1.26
+scipy >= 1.15
+tifffile >= 2025
+scikit-image >= 0.25
+trimesh >= 4.11
+gvxr >= 2.0.10
+matplotlib >= 3.10
+cython >= 3.2
