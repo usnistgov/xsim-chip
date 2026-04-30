@@ -5,7 +5,7 @@ import tifffile
 from skimage import io
 from skimage import measure as meas
 from skimage.util import img_as_ubyte, img_as_uint, img_as_float32
-from stl import mesh
+#from stl import mesh
 
 
 def pad_image_boundary(img_arr_in, cval_in=0, n_pad_in=1, quiet_in=False):
