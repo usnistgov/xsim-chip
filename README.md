@@ -368,7 +368,7 @@ Dabravolski, A., De Beenhouwer, J., Joost Batenburg, K., & Sijbers, J.
 Express, 24(22), 25129. https://doi.org/10.1364/OE.24.025129
 
 
-## Authors and Contact Information
+## Project Members and Contact Information
 
 * Newell Moser, PhD | Lead Programmer, [@NM0ser](https://github.com/NM0ser) | [NIST Homepage](https://www.nist.gov/people/newell-moser)
 
@@ -377,6 +377,8 @@ Express, 24(22), 25129. https://doi.org/10.1364/OE.24.025129
 * Zachary Grey, PhD | [NIST Homepage](https://www.nist.gov/people/zachary-grey)
 
 * Evgeniya Lagoda, PhD | [NIST Homepage](https://www.nist.gov/people/evgeniya-lagoda)
+
+* Nicholas Derimow, PhD | [NIST Homepage](https://www.nist.gov/people/nicholas-derimow)
 
 * Jason Killgore, PhD | [NIST Homepage](https://www.nist.gov/people/jason-killgore)
 
