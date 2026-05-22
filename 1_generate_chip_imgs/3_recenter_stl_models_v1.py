@@ -236,8 +236,8 @@ else:
 
     print(f"\nSaving the new STL models...")
     # Overwrite existing files
-    mesh_sn.export(sn_stl_path_in) 
-    mesh_cu.export(cu_stl_path_in)
-    mesh_si.export(si_stl_path_in)
+    mesh_sn.export(sn_stl_path) 
+    mesh_cu.export(cu_stl_path)
+    mesh_si.export(si_stl_path)
 
 print(f"\nScript finished successfully!")
