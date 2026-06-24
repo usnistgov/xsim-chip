@@ -383,6 +383,21 @@ Express, 24(22), 25129. https://doi.org/10.1364/OE.24.025129
 * Jason Killgore, PhD | [NIST Homepage](https://www.nist.gov/people/jason-killgore)
 
 
+## Community & Support
+
+We welcome feedback from the community. However, moving forward, the project
+members plan to mainly just provide minimal maintenance, specifically for any
+bugs and issues. The provided Python scripts are a proof-of-concept to
+demonstrate the potential of XCT simulations in the field of advanced
+semiconductor packaging. 
+
+In the future, we are interested in extending this framework to laminography.
+Other areas of interest include reducing VRAM/RAM requirements for each of the
+steps in the workflow in order to scale more efficiently to larger
+fields-of-view in the simulations. However, no formal timelines are in place
+for this roadmap.
+
+
 ## Acknowledgements
 
 This work was performed with funding from the CHIPS Metrology Program, part of
