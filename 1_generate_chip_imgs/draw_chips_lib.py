@@ -424,7 +424,23 @@ def insert_feature2d_in_img2d(feat_img, imgs_2d, global_centroid_indices):
 def insert_feature3d_via_grid2d(feat_imgs, imgs_3d, grid2d_arr, z_offset=0, 
     center_grid=False):
     """
-    Description
+    Inserts a local 3D numpy array, feat_imgs, into another (larger/global) 3D
+    numpy array called imgs_3d. The feat_imgs will be repeated along a plane
+    for every 2D grid point defined in grid2d_arr. Since these are index
+    coordinates, the final result could be off center with respect to the grid
+    points by plus/minus one index coordinate due to round-off errors. 
+
+    feat_imgs: The local 3D numpy array, or feature, as dtype np.uint8
+    imgs_3d: The global 3D numpy array as dtype np.uint8 
+    grid2d_arr: An m-by-2 numpy array containing integer coordinates. The center
+        point of feat_imgs will be positioned at each grid point, which 
+        represent the row-index and column-index positions in imgs_3d.
+    z_offset: By default, feat_imgs will be placed in imgs_3d starting at image
+        index 0. An integer offset can be defined here to change this behavior.
+    center_grid: A boolean that, if true, translates the 2D grid so that the
+        centroid position is aligned with the centroid row and column of imgs_3d.
+
+    returned: imgs_3d is returned with the modified values.
     """
 
     grid2d_pnts = (np.round(grid2d_arr)).astype(np.int32)
@@ -473,13 +489,36 @@ def insert_feature3d_via_grid2d(feat_imgs, imgs_3d, grid2d_arr, z_offset=0,
 
 def insert_feature2d_via_grid2d(feat_img, imgs_2d, grid2d_arr, 
     center_grid=False):
+    """
+    Not yet implemented.
+    """
     pass
 
 
 def generate_grid2d(delta_row, delta_col, n_row_points, n_col_points,
     row_offset=0, col_offset=0, staggered_rows=False, reshape2D=True):
     """
-    Description
+    Generates a 2D grid of points. Useful for "insert_feature3d_via_grid2d()"
+    defined above.
+
+    delta_row: An integer defining the distance, in pixels, between the rows of 
+        grid points.
+    delta_col: An integer defining the distance, in pixels, between the columns
+        of grid points.
+    n_row_points: The total number of rows.
+    n_col_points: The total number of columns.
+    row_offset: The first point will be at the origin. All the rows can be
+        translated by row_offset.
+    col_offset: The first point will be at the origin. All the columns can be
+        translated by col_offset.
+    staggered_rows: If true, successive rows will be staggered. This means every
+        other row will be offset by one-half of delta_col.
+    reshape2D: A boolean that changes the format of the returned array. If true,
+        the returned 2D numpy array will be an m-by-2 array where m is
+        n_row_points * n_col_points. If false, the returned 3D array will be  
+        have dimensions of [n_row_points, n_col_points, 2].
+
+    returned: Either a 2D or 3D array of integer points, depending on reshape2D.
     """
 
     d_row = int(np.round(np.absolute(delta_row)))
@@ -533,7 +572,15 @@ def generate_grid2d(delta_row, delta_col, n_row_points, n_col_points,
 
 def find_common_coords2d(coord2d_arr1, coord2d_arr2, TOL=1.0E-4):
     """
-    Description
+    Searches through two 2D arrays and returns a new array of common points.
+
+    coord2d_arr1: An m-by-2 numpy array.
+    coord2d_arr2: An n-by-2 numpy array.
+    TOL: For two points to be considered equal, the difference between the first
+        column and second column values must be less than or equal to TOL.
+
+    returned: A numpy array, possibly empty, that contains points found in both
+        coord2d_arr1 and coord2d_arr2.
     """
 
     n_coords1 = coord2d_arr1.shape[0]
@@ -563,7 +610,14 @@ def find_common_coords2d(coord2d_arr1, coord2d_arr2, TOL=1.0E-4):
 
 def del_duplicate_coords_2d(coord2d_arr1, TOL=1.0E-4):
     """
-    Description
+    Searches through a 2D array and deletes duplicate points.
+
+    coord2d_arr1: An m-by-2 numpy array.
+    TOL: Points are considered duplicates if their first and second coordinates
+        do not differ by more than TOL.
+
+    returned: A new numpy array of size n-by-2 without duplicate points, where
+        n <= m.
     """
 
     n_coords1 = coord2d_arr1.shape[0]
